@@ -1,0 +1,36 @@
+#Navbar {
+  background-color: #25715e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px 25px;
+  z-index: 3;
+  width: 100%;
+  opacity: 97%;
+  .container {
+    .navbarContents {
+      display: flex;
+      justify-content: space-between;
+      .Logo {
+        color: white;
+        font-size: 22px;
+      }
+      .Bars {
+        ul {
+          display: flex;
+          gap: 40px;
+          li {
+            font-size: 20px;
+            a {
+              color: #d6e2d4;
+              transition: 0.2s;
+            }
+            a:hover {
+              color: gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

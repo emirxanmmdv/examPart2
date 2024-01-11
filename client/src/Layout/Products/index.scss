@@ -1,0 +1,69 @@
+#Products {
+  .background {
+    background-image: url("https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg");
+    object-fit: cover;
+    padding-bottom: 200px;
+    .sectionContainer {
+      .productsContents {
+        .productsHeader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .productsDescription {
+            margin-top: 100px;
+            margin-bottom: 35px;
+            .description {
+              font-style: italic;
+              color: #25715e;
+            }
+          }
+          .productsTitle {
+            h4 {
+              font-size: 40px;
+              color: #25715e;
+              margin-bottom: 60px;
+            }
+          }
+          .productFilter{
+            .filterByPrice{
+              all: unset;
+              background-color: gray;
+              padding: 15px 25px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .productCards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            gap: 55px;
+            .productCard{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                    .productImg{
+                        margin-bottom: 10px;
+                    }
+                    .productName{
+                        margin-bottom: 10px;
+                        color: #25715e;
+                        font-size: 20px;
+
+                    }
+                    .productPrice{
+                        color: #25715e;
+                        font-size: 13px;
+
+                    }
+                
+
+            }
+        }
+
+      }
+    }
+  }
+}
