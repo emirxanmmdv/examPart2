@@ -7,29 +7,47 @@
   z-index: 3;
   width: 100%;
   opacity: 97%;
+
   .container {
     .navbarContents {
       display: flex;
       justify-content: space-between;
+
       .Logo {
         color: white;
         font-size: 22px;
       }
+
       .Bars {
         ul {
           display: flex;
           gap: 40px;
+
           li {
             font-size: 20px;
+
             a {
               color: #d6e2d4;
               transition: 0.2s;
             }
+
             a:hover {
               color: gold;
             }
           }
         }
+      }
+
+      .icons {
+        font-size: 25px;
+
+        a {
+          cursor: pointer;
+          color: white;
+        }
+
+
+
       }
     }
   }

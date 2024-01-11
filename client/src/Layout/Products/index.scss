@@ -56,7 +56,17 @@
                     .productPrice{
                         color: #25715e;
                         font-size: 13px;
+                        margin-bottom: 15px;
 
+                    }
+                    .addToWishList{
+                      .addToWishListBtn{
+                        all: unset;
+                        background-color: rgb(252, 252, 252);
+                        padding: 10px 22px;
+                        cursor: pointer;
+                        font-size: 22px;
+                      }
                     }
                 
 

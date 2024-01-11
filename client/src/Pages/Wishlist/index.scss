@@ -1,0 +1,33 @@
+.productCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+        .productImg{
+            margin-bottom: 10px;
+        }
+        .productName{
+            margin-bottom: 10px;
+            color: #25715e;
+            font-size: 20px;
+
+        }
+        .productPrice{
+            color: #25715e;
+            font-size: 13px;
+            margin-bottom: 15px;
+
+        }
+        .addToWishList{
+          .addToWishListBtn{
+            all: unset;
+            background-color: rgb(7, 247, 79);
+            padding: 10px 22px;
+            cursor: pointer;
+          }
+        }
+    
+
+}

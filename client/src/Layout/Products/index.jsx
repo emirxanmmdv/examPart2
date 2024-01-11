@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios"
 import "./index.scss";
+import { CiHeart } from "react-icons/ci";
 
+import { WishlistContext } from "../../Context/wishlistContext.jsx";
 const Products = () => {
   const [product, setProduct] = useState("");
   async function axiosData() {
@@ -17,6 +19,9 @@ const Products = () => {
 
   }
 
+  const { wishlist , addToWishlist } = useContext(WishlistContext)
+  
+  console.log(wishlist);
   return (
     <section id="Products">
       <div className="background">
@@ -45,6 +50,11 @@ const Products = () => {
                     </div>
                     <div className="productPrice">
                         <p>${item.price}</p>
+                    </div>
+                    <div className="addToWishList">
+                      <button className="addToWishListBtn" onClick={()=>addToWishlist(item)}>
+                      <CiHeart/>
+                      </button>
                     </div>
                   </div>
                 ))}

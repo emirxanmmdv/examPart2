@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
+import { CiHeart } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -32,6 +33,12 @@ const Navbar = () => {
               </li>
 
             </ul>
+          </div>
+          <div className="icons">
+            <NavLink to={"/wishlist"}>
+               <CiHeart/>
+            </NavLink>
+           
           </div>
         </div>
       </div>
