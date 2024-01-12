@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios"
 import "./index.scss";
 import { CiHeart } from "react-icons/ci";
+import { FaEye } from "react-icons/fa";
 
 import { WishlistContext } from "../../Context/wishlistContext.jsx";
+import DetailsPage from "../../Pages/DetailsPage/index.jsx";
+import { Link } from "react-router-dom";
 const Products = () => {
   const [product, setProduct] = useState("");
   async function axiosData() {
@@ -13,14 +16,14 @@ const Products = () => {
   useEffect(() => {
     axiosData();
   }, []);
-  
-  const sortByPrice = ()=>{
-    setProduct([...product].sort((a,b)=>a.price>b.price ? 1 : b.price > a.price ? -1 : 0))
+
+  const sortByPrice = () => {
+    setProduct([...product].sort((a, b) => a.price > b.price ? 1 : b.price > a.price ? -1 : 0))
 
   }
 
-  const { wishlist , addToWishlist } = useContext(WishlistContext)
-  
+  const { wishlist, addToWishlist } = useContext(WishlistContext)
+
   console.log(wishlist);
   return (
     <section id="Products">
@@ -46,16 +49,24 @@ const Products = () => {
                       <img src={item.image} />
                     </div>
                     <div className="productName">
-                        <p>{item.name}</p>
+                      <p>{item.name}</p>
                     </div>
                     <div className="productPrice">
-                        <p>${item.price}</p>
+                      <p>${item.price}</p>
                     </div>
-                    <div className="addToWishList">
-                      <button className="addToWishListBtn" onClick={()=>addToWishlist(item)}>
-                      <CiHeart/>
-                      </button>
+                    <div className="productIcons">
+                      <div className="addToWishList">
+                        <button className="addToWishListBtn" onClick={() => addToWishlist(item)}>
+                          <CiHeart />
+                        </button>
+                        <button className="Details" >
+                          <Link to={`/details`}>
+                            <FaEye /></Link>
+
+                        </button>
+                      </div>
                     </div>
+
                   </div>
                 ))}
             </div>
